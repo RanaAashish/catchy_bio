@@ -1,9 +1,0 @@
-pip install openai==1.12.0
-pip install langchain==0.1.9
-pip install python-dotenv==1.0.1
-pip install fastapi==0.109.2
-pip install "uvicorn[standard]"
-# pip install magnum not getting installed thorowing some error 
-pip install awscli==1.32.49
-# install node also i am using node  v20.11.0, i already installed globlly node earlier but i don't know how it came in my virtual environment i didn't install in my virtual environment 
-npm install -g aws-cdk # 2.130.0 (build bd6e5ee)
