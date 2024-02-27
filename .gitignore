@@ -2,3 +2,5 @@
 catchbio
 *.zip
 catchybio-infra\.env
+catchybio-infra\node_modules\
+catchybio-infra\cdk.out\

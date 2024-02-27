@@ -1,0 +1,143 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "CatchybioInfraStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CatchybioInfraStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CatchybioInfraStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CatchybioInfraStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fab3eff0dd636e77f6590f356601317b9636bc0d4d6a87df66f1a8be3ab466bd.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CatchybioInfraStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CatchybioInfraStack.assets"
+      ],
+      "metadata": {
+        "/CatchybioInfraStack/BaseLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseLayer786B35E5"
+          }
+        ],
+        "/CatchybioInfraStack/ApiFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiFunctionServiceRole52B9747B"
+          }
+        ],
+        "/CatchybioInfraStack/ApiFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiFunctionCE271BD4"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApi0C43BF4B"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiDeployment180EC503bff223c716607287867a3ef17ffa10a7"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiDeploymentStageprod3855DE66"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiEndpoint0551178A"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiproxyC95856DD"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Default/{proxy+}/ANY/ApiPermission.CatchybioInfraStackRestApiF0BA584D.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiproxyANYApiPermissionCatchybioInfraStackRestApiF0BA584DANYproxy8CC7115A"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Default/{proxy+}/ANY/ApiPermission.Test.CatchybioInfraStackRestApiF0BA584D.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiproxyANYApiPermissionTestCatchybioInfraStackRestApiF0BA584DANYproxyD14992D6"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiproxyANY1786B242"
+          }
+        ],
+        "/CatchybioInfraStack/RestApi/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RestApiANYA7C1DC94"
+          }
+        ],
+        "/CatchybioInfraStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CatchybioInfraStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CatchybioInfraStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CatchybioInfraStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CatchybioInfraStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
